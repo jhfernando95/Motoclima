@@ -11,6 +11,7 @@
     <string name="str_tier_password">Contraseña</string>
     <string name="str_tie_confirm_password">Confirmar Contraseña</string>
     <string name="str_btn_createaccount">CREA CUENTA</string>
+    <string name="str_tb_tittle">Crear cuenta</string>
 
 
 </resources>
