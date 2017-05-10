@@ -35,8 +35,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        loader = (ProgressBar) findViewById(R.id.loader);
-        myRecycler = (RecyclerView) findViewById(R.id.myRecycler);
+
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         myRecycler.setLayoutManager(linearLayoutManager);
