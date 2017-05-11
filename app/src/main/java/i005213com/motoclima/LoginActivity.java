@@ -28,7 +28,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
     }
 
     public void goCreateAccount(View view) {
@@ -36,4 +35,6 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
 }

@@ -73,7 +73,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:text="@string/str_btn_login"
-                    android:theme="@style/RaisedButtonDark" />
+                    android:theme="@style/RaisedButtonDark"
+                    android:onClick="goCreateAccount"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
