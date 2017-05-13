@@ -15,6 +15,8 @@
     <string name="str_tab_search">Buscar</string>
     <string name="str_tab_home">Inicio</string>
     <string name="str_tab_profile">Perfil</string>
+    <string name="txt_btn_cargar_datos">Cargar Datos</string>
+    <string name="str_menu_cargar_datos">Cargar datos</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

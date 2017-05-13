@@ -8,6 +8,10 @@
     tools:context="i005213com.motoclima.LoginActivity"
     android:background="@color/colorPrimary">
 
+
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

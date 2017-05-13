@@ -8,6 +8,8 @@
     cardview:cardCornerRadius="5dp"
     android:layout_margin="10dp">
 
+
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -61,6 +63,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
+
+
                 <CheckBox
                     android:id="@+id/id_chb_like_card"
                     android:layout_width="wrap_content"
@@ -74,6 +78,53 @@
                     android:textColor="@android:color/white"
                     android:textSize="15sp"
                     android:layout_marginLeft="5dp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorAccent">
+                        <ImageView
+                            android:id="@+id/logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/ic_launcher"/>
+                        <TextView
+                            android:id="@+id/txt_name_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Hola Mundo"
+                            android:textColor="#FFFF"
+                            android:gravity="center"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/txt_email_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Hola Mundo"
+                        android:gravity="center"
+                        android:textColor="#FFFF"
+                        android:background="@color/colorPrimary"/>
+
+
+
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
         </LinearLayout>
