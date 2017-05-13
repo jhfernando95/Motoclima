@@ -18,6 +18,7 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.util.List;
 
+import i005213com.motoclima.Views.ContainerActivity;
 import i005213com.motoclima.Views.CreateAccountActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -34,6 +35,11 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CreateAccountActivity.class);
         startActivity(intent);
 
+    }
+
+    public void goCreateContainer(View view){
+        Intent intent = new Intent(this, ContainerActivity.class);
+        startActivity(intent);
     }
 
 
