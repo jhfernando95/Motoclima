@@ -15,8 +15,17 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:paddingTop="10dp">
 
-        //en esta parte se debe poner recicler view
-        <include layout="@layout/cardview_picture"/>"
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/myRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
 
 
     </LinearLayout>

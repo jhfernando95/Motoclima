@@ -21,16 +21,8 @@
         </activity>
         <activity
             android:name=".Views.CreateAccountActivity"
-            android:parentActivityName=".LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LoginActivity" />
-        </activity>
-
-        <activity android:name=".Views.ContainerActivity"></activity>
-
-
-
+            android:parentActivityName=".LoginActivity"></activity>
+            <activity android:name=".Views.ContainerActivity"></activity>
 
     </application>
 

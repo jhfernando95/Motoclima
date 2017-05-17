@@ -33,12 +33,6 @@
                 android:layout_centerInParent="true"/>
         </RelativeLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.4"
-            android:fillViewport="true">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -104,13 +98,12 @@
                         android:textSize="15sp"
                         android:layout_toRightOf="@id/id_txv_dontHaveAccount"
                         android:layout_marginLeft="10dp"
-                        android:onClick="goCreateAccount"/>
+                        android:onClick="onShowAccount"/>
 
                 </RelativeLayout>
 
             </LinearLayout>
 
-        </ScrollView>
 
     </LinearLayout>
 
