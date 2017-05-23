@@ -2,8 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="i005213com.motoclima">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-feature android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+
 
     <application
         android:allowBackup="true"
@@ -23,6 +30,14 @@
             android:name=".Views.CreateAccountActivity"
             android:parentActivityName=".LoginActivity"></activity>
             <activity android:name=".Views.ContainerActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value=""/>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCAlVrxeMrWI2BLYGYbYyP9Itb9FASUt1M"/>
+
 
     </application>
 
