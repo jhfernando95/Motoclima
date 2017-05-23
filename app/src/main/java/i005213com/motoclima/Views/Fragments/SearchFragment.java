@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import i005213com.motoclima.R;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
@@ -16,58 +15,100 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 
+import i005213com.motoclima.R;
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SearchFragment extends Fragment implements OnMapReadyCallback {
-    GoogleMaps m_map;
+public class SearchFragment extends Fragment  implements OnMapReadyCallback{
+
+    View view;
+    GoogleMap m_map;
     boolean mapReady = false;
 
     static final CameraPosition PASTO = CameraPosition.builder()
-            .target(new LatLng(1.2086284, -77.2779443))
+            .target(new LatLng(1.2089284,-77.2779443))
             .zoom(15)
             .bearing(90)
             .tilt(45)
             .build();
 
+    static final CameraPosition SEATTLE = CameraPosition.builder()
+            .target(new LatLng(47.6204,-122.3491))
+            .zoom(15)
+            .bearing(90)
+            .tilt(45)
+            .build();
+
+    static final CameraPosition DUBLIN = CameraPosition.builder()
+            .target(new LatLng(53.3478,-6.2597))
+            .zoom(15)
+            .bearing(90)
+            .tilt(45)
+            .build();
+
+    static final CameraPosition TOKYO= CameraPosition.builder()
+            .target(new LatLng(35.6895,139.6917))
+            .zoom(15)
+            .bearing(90)
+            .tilt(45)
+            .build();
+
+    public SearchFragment() {
+        // Required empty public constructor
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_search);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        view=inflater.inflate(R.layout.fragment_search, container, false);
 
 
-        Button btnNormal = (Button) findViewById(R.id.id_btn_seattle);
+        Button btnNormal = (Button) view.findViewById(R.id.id_btn_Seattle);
         btnNormal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 motoclima(SEATTLE);
-                // m_map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                //m_map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
             }
         });
 
+        Button btnSatelite = (Button) view.findViewById(R.id.id_btn_Dublin);
+        btnSatelite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                motoclima(DUBLIN);
+                //m_map.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
+            }
+        });
 
-        MapFragment mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
+        Button btnHibrido = (Button) view.findViewById(R.id.id_btn_Tokyo);
+        btnHibrido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                motoclima(TOKYO);
+                //m_map.setMapType(GoogleMap.MAP_TYPE_HYBRID);
+            }
+        });
+
+        MapFragment mapFragment = (MapFragment) getActivity().getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
 
-
+        return view;
     }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
+        //metodo para manejo de mapas
 
-        mapReady = true;
+        mapReady=true;
         m_map = googleMap;
-        //LatLng pasto = new LatLng(1.2086284 , -77.2779443);
-        //CameraPosition target = CameraPosition.builder().target(pasto).zoom(15).build();
-        //m_map.moveCamera(CameraUpdateFactory.newCameraPosition(target));
         motoclima(PASTO);
-
     }
-    public  void motoclima(CameraPosition perro) {
 
-        m_map.animateCamera(CameraUpdateFactory.newCameraPosition(perro), 2000, null);
-
+    public void motoclima(CameraPosition search) {
+        m_map.animateCamera(CameraUpdateFactory.newCameraPosition(search),1000, null);
     }
 }
-
-

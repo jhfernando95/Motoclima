@@ -9,15 +9,11 @@
     android:background="@color/colorPrimary">
 
 
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:weightSum="1">
-
 
 
         <RelativeLayout
@@ -29,80 +25,85 @@
                 android:id="@+id/logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/moto"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:background="@drawable/moto" />
         </RelativeLayout>
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:weightSum="1">
+
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="30dp">
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextWhite">
 
-                <android.support.design.widget.TextInputLayout
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/id_tie_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/EditTextWhite">
+                    android:hint="@string/str_tie_email1"
+                    android:textColor="@android:color/black" />
+            </android.support.design.widget.TextInputLayout>
 
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/id_tie_username"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/str_tie_email1"
-                        android:textColor="@android:color/black"/>
-                </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextWhite">
 
-                <android.support.design.widget.TextInputLayout
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/id_tie_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:theme="@style/EditTextWhite">
-                    <android.support.design.widget.TextInputEditText
-                        android:id="@+id/id_tie_password"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/str_tie_password"
-                        android:inputType="textPassword"
-                        android:textColor="@android:color/black"/>
-                </android.support.design.widget.TextInputLayout>
+                    android:hint="@string/str_tie_password"
+                    android:inputType="textPassword"
+                    android:textColor="@android:color/black" />
+            </android.support.design.widget.TextInputLayout>
 
-                <Button
-                    android:id="@+id/id_btn_login"
-                    android:layout_width="match_parent"
+            <Button
+                android:id="@+id/id_btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:onClick="goCreateContainer"
+                android:text="@string/str_btn_login"
+                android:theme="@style/RaisedButtonDark" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/id_txv_dontHaveAccount"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/str_btn_login"
-                    android:layout_marginTop="30dp"
-                    android:theme="@style/RaisedButtonDark"
-                    android:onClick="goCreateContainer"/>
+                    android:text="@string/str_txv_dontHaveAccount"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/id_txv_createHere"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center">
+                    android:layout_marginLeft="10dp"
+                    android:onClick="onShowAccount"
+                    android:text="@string/str_txv_createHere"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/id_txv_dontHaveAccount"
+                    android:layout_alignStart="@+id/id_txv_dontHaveAccount"
+                    android:layout_marginStart="40dp" />
 
-                    <TextView
-                        android:id="@+id/id_txv_dontHaveAccount"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/str_txv_dontHaveAccount"
-                        android:textColor="@android:color/black"
-                        android:textStyle="bold"
-                        android:textSize="15sp" />
+            </RelativeLayout>
 
-                    <TextView
-                        android:id="@+id/id_txv_createHere"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/str_txv_createHere"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        android:textSize="15sp"
-                        android:layout_toRightOf="@id/id_txv_dontHaveAccount"
-                        android:layout_marginLeft="10dp"
-                        android:onClick="onShowAccount"/>
-
-                </RelativeLayout>
-
-            </LinearLayout>
+        </LinearLayout>
 
 
     </LinearLayout>
