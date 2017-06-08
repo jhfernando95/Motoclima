@@ -8,21 +8,28 @@
 
     <include layout="@layout/actionbar_toolbar"/>
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.6">
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <ImageView
+            android:layout_marginTop="5dp"
             android:id="@+id/logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/z1000"
-            android:layout_marginTop="56dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true" />
 
         <LinearLayout
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -32,6 +39,8 @@
             android:paddingLeft="15dp"
             android:layout_below="@+id/logo"
             android:layout_alignParentStart="true">
+
+
 
             <TextView
                 android:id="@+id/id_txv_username_card"
@@ -99,8 +108,21 @@
                     android:textColor="@android:color/black"
                     android:textSize="15sp" />
             </LinearLayout>
-        </LinearLayout>
-    </RelativeLayout>
 
+            <Button
+                android:id="@+id/id_btn_signOff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/str_btn_signoff"
+                android:onClick="goLogginActivity"
+                android:theme="@style/RaisedButtonDark" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

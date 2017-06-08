@@ -38,9 +38,9 @@ public class HelperUser extends SQLiteOpenHelper {
             "CREATE TABLE " + TABLE_USERS + " (" +
                     COLUMN_U_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     COLUMN_U_NAME + " TEXT, " +
+                    COLUMN_U_EMAIL + " TEXT," +
                     COLUMN_U_USERNAME + " TEXT, " +
                     COLUMN_U_PASSWORD + " TEXT, " +
-                    COLUMN_U_EMAIL + " TEXT," +
                     COLUMN_U_STATUS + " TEXT" +
                     ")";
 

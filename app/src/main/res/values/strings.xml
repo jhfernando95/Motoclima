@@ -23,6 +23,8 @@
     <string name="id_btn_map_dublin">Dublin</string>
     <string name="id_btn_map_tokyo">Tokyo</string>
     <string name="id_btn_map_seattle">Seattle</string>
+    <string name="str_login_username">Usuario</string>
+    <string name="str_btn_signoff">Cerrar Sesion</string>
 
 
 </resources>

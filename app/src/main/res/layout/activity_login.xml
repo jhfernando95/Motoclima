@@ -42,10 +42,10 @@
                 android:theme="@style/EditTextWhite">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/id_tie_username"
+                    android:id="@+id/id_login_username"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/str_tie_email1"
+                    android:hint="@string/str_login_username"
                     android:textColor="@android:color/black" />
             </android.support.design.widget.TextInputLayout>
 
@@ -55,7 +55,7 @@
                 android:theme="@style/EditTextWhite">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/id_tie_password"
+                    android:id="@+id/id_login_password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/str_tie_password"
